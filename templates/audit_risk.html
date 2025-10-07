@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audit Risk Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Audit Risk Analysis</h2>
+    {{ chart|safe }}
+    <ul>
+        {% for account, risk in risks %}
+            <li><strong>{{ account }}</strong>: {{ risk }} risk</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
